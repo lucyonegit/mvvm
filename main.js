@@ -96,12 +96,13 @@ class Watcher {
   //   arr.forEach(key => {
   //     val = val[key]; //调用属性get方法
   //   });
-  //   Dep.target = null;
+  //   
   // }
 }
 Watcher.prototype.update = function () {
   let arr = this.exp.split(".");
   let value = this.mvvm;
+  Dep.target = null;
   arr.forEach(key => {
     value = value[key]; // 通过get获取到新的值
   });
