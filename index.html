@@ -5,22 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-
+  <title>mymvvm</title>
 </head>
 
 <body>
-  <div class="main" id="app">
-    <form>
-      <input type="text" v-model="number">
-      <button type="button" v-click="increment">增加</button>
-    </form>
-    <h3 v-bind="number">{{name}}</h3>
-    <h3>{{age}}</h3>
-    <h3>{{name}}</h3>
+  <div id="app">
+    <h1>姓名：{{name}}</h1>
+    <p>年齡{{age}}</p>
+    <input v-data="name" type="text">
+    <input v-data="name" type="text">
+    <div v-if="divshow" class="ddd"></div>
   </div>
-  <script src="main.js"></script>
 </body>
+<script src="./mvvm.js"></script>
+<style>
+  .ddd {
+    width: 200px;
+    height: 100px;
+    background: darkcyan;
+  }
+</style>
 
 </html>
